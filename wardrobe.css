@@ -1,0 +1,38 @@
+/* Real photographs, cotton cord, wooden pegs and a paper collection page. */
+.wardrobe-studio{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(245px,1fr);gap:32px;max-width:1000px;min-height:365px;margin:0 auto;padding:4px 4px 16px;color:#484b46;font-family:var(--serif,serif)}
+.wardrobe-gallery{position:relative;min-width:0;padding-top:65px}
+.wardrobe-instruction{position:absolute;top:-9px;left:12px;right:0;margin:0;font-size:15px;line-height:1.8;color:#8a8878}
+.wardrobe-clothesline{position:absolute;top:26px;left:0;width:100%;height:42px;overflow:visible;pointer-events:none}
+.wardrobe-clothesline path{fill:none;stroke:#9e8b69;stroke-width:2;filter:drop-shadow(0 2px 1px #74633f22)}
+.wardrobe-rack{display:flex;align-items:flex-start;justify-content:space-around;gap:15px;padding:0 5px}
+.wardrobe-hanging-photo{position:relative;width:calc((100% - 30px)/3);max-width:172px;min-width:0;transform:rotate(var(--wardrobe-tilt));transform-origin:50% -15px;transition:transform .3s ease}
+.wardrobe-hanging-photo:nth-child(2){margin-top:14px}.wardrobe-hanging-photo:nth-child(3){margin-top:2px}
+.wardrobe-hanging-photo:focus-within,.wardrobe-hanging-photo:hover{transform:rotate(0deg) translateY(-3px);z-index:2}
+.wardrobe-wooden-clip{position:absolute;top:-23px;left:calc(50% - 7px);width:14px;height:40px;z-index:4;pointer-events:none;border-radius:3px 3px 2px 2px;background:linear-gradient(90deg,#b79a68 0,#d7bd8b 22%,#e3cd9e 45%,#c2a576 49%,#ddc390 57%,#b89c69 100%);box-shadow:2px 3px 3px #5e513f33, inset 0 0 0 1px #aa8a5933;transform:rotate(-3deg)}
+.wardrobe-wooden-clip:before{content:'';position:absolute;top:15px;left:-2px;width:18px;height:5px;border-radius:3px;background:linear-gradient(#bbb9ae,#7b7b70 50%,#c1bdae);box-shadow:0 1px 2px #66584444}
+.wardrobe-wooden-clip:after{content:'';position:absolute;top:5px;bottom:5px;left:6px;width:1px;background:#a58c6144}
+.wardrobe-photo-card{position:relative;display:block;width:100%;padding:8px 8px 10px;border:1px solid #d5caba;border-radius:1px;background:#fffaf0;color:#6c6959;box-shadow:2px 7px 9px #71604424;cursor:grab;touch-action:none;-webkit-user-select:none;user-select:none;transition:box-shadow .25s,border-color .25s;font:inherit;min-height:0}
+.wardrobe-photo-card:hover{box-shadow:3px 10px 14px #71604435}.wardrobe-photo-card.is-selected{border-color:#a0aa8d;box-shadow:0 0 0 2px #9ca98335,2px 7px 9px #71604424}
+.wardrobe-photo-card:focus-visible{outline:3px solid #896779;outline-offset:5px}
+.wardrobe-source-image{display:flex;align-items:center;justify-content:center;width:100%;height:190px;background:#eee8dc;overflow:hidden}
+.wardrobe-artwork{display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;-webkit-user-drag:none}
+.wardrobe-card-name{display:block;min-height:36px;margin:9px 0 2px;font-size:14px;line-height:1.3;text-align:center}
+.wardrobe-card-check{display:block;color:#9a8a79;font-size:11px;line-height:1.6;letter-spacing:.02em}.is-selected .wardrobe-card-check{color:#70815e}
+.wardrobe-photo-card.is-dragging{opacity:.36}
+.wardrobe-drag-ghost{position:fixed!important;z-index:10000!important;pointer-events:none!important;opacity:.98!important;transform:rotate(-4deg) scale(1.025);box-shadow:5px 18px 24px #5148324a;transition:none!important;cursor:grabbing}
+.wardrobe-collection{position:relative;align-self:stretch;min-height:350px;padding:17px 20px 12px;border:1px solid #d6cbb9;background:linear-gradient(105deg,#f2e8d7,#faf4e8 25%,#f5eddc);box-shadow:2px 5px 11px #6a5b3d1b;transform:rotate(.8deg);transition:background .25s,box-shadow .25s}
+.wardrobe-collection:before{content:'';position:absolute;inset:7px;border:1px dashed #b9ad9470;pointer-events:none}
+.wardrobe-collection-title{position:relative;text-align:center}.wardrobe-collection-title>span{display:block;font:8px Georgia,serif;letter-spacing:.16em;color:#9a947e}.wardrobe-collection-title h3{margin:7px 0 11px;font-size:20px;font-weight:400;color:#7c8169}
+.wardrobe-landing{position:relative;width:100%;min-height:218px;display:flex;justify-content:center;align-items:center}
+.wardrobe-kept-card{position:relative;width:155px;max-width:85%;margin:0 0 6px;padding:8px 8px 10px;background:#fffbf1;box-shadow:2px 6px 8px #6a5b3e2b;border:1px solid #ded3c1;transform:rotate(2deg);transform-origin:center}
+.wardrobe-kept-card:before{content:'';position:absolute;left:24%;top:-12px;width:54%;height:23px;background:url('assets/scrapbook/washi-moon.svg') center/100% 100% no-repeat;z-index:2;transform:rotate(-5deg)}
+.wardrobe-kept-image{height:170px;display:flex;align-items:center;justify-content:center;background:#f0e9dc;overflow:hidden}
+.wardrobe-kept-card figcaption{margin-top:8px;font-size:13px;line-height:1.5;text-align:center;color:#746e5e}
+.wardrobe-kept-stamp{position:absolute;right:-8px;bottom:6px;padding:7px 8px;border:1px solid #ab7d88;border-radius:2px;color:#ab7d88;font-size:12px;transform:rotate(-11deg);opacity:.8;pointer-events:none;background:#fcf4e544}
+.wardrobe-selection-status{position:relative;min-height:35px;margin:10px 0 0;font-size:12px;line-height:1.7;text-align:center;color:#8a816e}
+.wardrobe-drop-hint{position:absolute;inset:70px 14px 50px;display:flex;align-items:center;justify-content:center;border:2px dashed #9ba889;color:#6d7c5e;background:#f5f0dfeb;opacity:0;pointer-events:none;font-size:20px;transition:opacity .2s}
+.wardrobe-collection.is-drop-ready{box-shadow:0 0 0 3px #9cae8544,2px 5px 11px #6a5b3d1b}.wardrobe-collection.is-drop-ready .wardrobe-drop-hint{opacity:1}
+.wardrobe-image-error,.wardrobe-empty-note{font-size:14px;line-height:1.8;text-align:center;padding:10px;color:#91846f}.wardrobe-is-empty{grid-template-columns:1fr 1fr}
+@media(max-height:760px) and (min-width:900px){.wardrobe-studio{min-height:320px;gap:24px}.wardrobe-source-image{height:160px}.wardrobe-card-name{font-size:13px}.wardrobe-collection{min-height:315px;padding-top:13px}.wardrobe-landing{min-height:190px}.wardrobe-kept-image{height:145px}.wardrobe-kept-card{width:140px}.wardrobe-selection-status{margin-top:5px}}
+@media(max-width:650px){.wardrobe-studio{grid-template-columns:minmax(0,1fr);gap:28px}.wardrobe-gallery{padding-top:65px}.wardrobe-source-image{height:170px}.wardrobe-card-name{font-size:13px}.wardrobe-collection{min-height:330px;max-width:350px;width:90%;justify-self:center}.wardrobe-instruction{font-size:14px}.wardrobe-rack{gap:10px}.wardrobe-hanging-photo{width:calc((100% - 20px)/3)}}
+@media(prefers-reduced-motion:reduce){.wardrobe-studio *,.wardrobe-drag-ghost{animation:none!important;transition:none!important}}
